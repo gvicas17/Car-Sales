@@ -29,6 +29,7 @@ export default function carReducer (state = initialState, action){
             additionalFeatures:state.additionalFeatures.filter(
                 item => item !== action.payload
             ),
+            additionalPrice: state.additionalPrice + action.payload.price,
             }
         case REMOVE_FEATURE: 
             return{
